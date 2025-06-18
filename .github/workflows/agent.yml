@@ -58,7 +58,7 @@ jobs:
 
       - name: Check Python syntax
         run: |
-          python -m py_compile ai_agent_working_fixed.py
+          python -m py_compile main.py
 
       - name: Test imports
         run: |
@@ -68,7 +68,7 @@ jobs:
           os.environ.setdefault('TRANSFORMERS_CACHE', '/tmp/transformers_cache')
           os.environ.setdefault('HF_HOME', '/tmp/huggingface')
           try:
-              from ai_agent_working_fixed import app
+              from main import app
               print('✅ Flask app imports successfully')
           except Exception as e:
               print(f'❌ Import error: {e}')
