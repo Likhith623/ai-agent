@@ -101,7 +101,7 @@ jobs:
         uses: google-github-actions/auth@v2  # Updated to v2
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
-          project_id: nikitha-2025-1
+          project_id: lik-460814
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
@@ -114,7 +114,7 @@ jobs:
             --platform=managed \
             --allow-unauthenticated \
             --set-env-vars ENV=dev \
-            --project=nikitha-2025-1
+            --project=lik-460814
 
   approval:
     needs: deploy-dev
@@ -141,7 +141,7 @@ jobs:
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
-          project_id: nikitha-2025-1
+          project_id: lik-460814
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
@@ -154,4 +154,4 @@ jobs:
             --platform=managed \
             --allow-unauthenticated \
             --set-env-vars ENV=prod \
-            --project=nikitha-2025-1
+            --project=lik-460814
